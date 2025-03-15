@@ -1,12 +1,13 @@
 let age = 21;
-let birthYear = new Date().getFullYear() - age;
+let birthYear = 2025 - age;
 console.log("Age:", age, "Birth Year:", birthYear);
 function testScope() {
     let x = 10;
 }
-console.log(typeof x); // Undefined (x is not accessible outside the function)
+console.log(typeof x); 
 
-let num1 = 10, num2 = 5;
+let num1 = 10;
+let num2 = 5;
 console.log("Sum:", num1 + num2);
 console.log("Difference:", num1 - num2);
 console.log("Product:", num1 * num2);
@@ -14,19 +15,24 @@ console.log("Quotient:", num1 / num2);
 
 let strNum = "123";
 let convertedNum = Number(strNum);
-console.log("Converted to Number:", convertedNum, "Back to String:", String(convertedNum));
+console.log("Converted to Number:", convertedNum) ;
+console.log("Back to String:", String(convertedNum));
 
 let number = 7;
 console.log(number % 2 === 0 ? "Even" : "Odd");
 
 let personAge = 18;
-if (personAge < 13) {
+if (personAge < 13)
+{
     console.log("Child");
-} else if (personAge < 20) {
+} 
+else if (personAge < 20) {
     console.log("Teenager");
-} else if (personAge < 60) {
+}
+else if (personAge < 60) {
     console.log("Adult");
-} else {
+}
+else {
     console.log("Senior");
 }
 
@@ -52,12 +58,12 @@ while (userInput !== "stop") {
 
 let i = 1;
 do {
-    console.log(`5 x ${i} = ${5 * i}`);
+    console.log("5 x", i, "=", 5 * i);
     i++;
 } while (i <= 10);
 
 function greet(name) {
-    console.log(`Hello, ${name}!`);
+    console.log("Hello",name);
 }
 greet("Mahnoor");
 
@@ -67,11 +73,18 @@ function sum(a, b) {
 console.log(sum(3, 7));
 
 function findMax(numbers) {
-    return Math.max(...numbers);
+    let max = numbers[0]; 
+    for (let num of numbers) {
+        if (num > max) {
+            max = num; 
+        }
+    }
+    return max;
 }
 console.log(findMax([3, 7, 2, 8, 5]));
 
-const greetArrow = name => console.log(`Hello, ${name}!`);
+
+const greetArrow = name => console.log("Hello",name);
 greetArrow("Mahnoor");
 
 const square = num => num * num;
@@ -80,11 +93,15 @@ console.log(square(4));
 const findLongString = arr => arr.find(str => str.length > 5);
 console.log(findLongString(["apple", "banana", "kiwi", "strawberry"]));
 
-let numbersArr = [1, 2, 3, 4, 5];
-let sumArr = numbersArr.reduce((acc, val) => acc + val, 0);
-console.log("Sum of array elements:", sumArr);
+let numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+for(let i = 0; i < numbers.length; i++) {
+    sum += num;
+}
+console.log("Sum:", sum); 
 
-let names = ["Ali", "Ahmed", "Zainab", "Muhammad", "Fatima"];
+
+let names = ["Ali", "urooj", "Mahnoor", "Muhammad", "Fatima"];
 let longestName = names.reduce((a, b) => (a.length > b.length ? a : b));
 console.log("Longest name:", longestName);
 
