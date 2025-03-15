@@ -2,9 +2,9 @@ let age = 21;
 let birthYear = 2025 - age;
 console.log("Age:", age, "Birth Year:", birthYear);
 function testScope() {
-    let x = 10;
+    let x = 10;  // x is local to this function
 }
-console.log(typeof x); 
+testScope();  // Removed console.log(typeof x)
 
 let num1 = 10;
 let num2 = 5;
@@ -18,10 +18,10 @@ let convertedNum = Number(strNum);
 console.log("Converted to Number:", convertedNum) ;
 console.log("Back to String:", String(convertedNum));
 
-let number = 7;
+let number = 9;
 console.log(number % 2 === 0 ? "Even" : "Odd");
 
-let personAge = 18;
+let personAge = 45;
 if (personAge < 13)
 {
     console.log("Child");
@@ -36,7 +36,7 @@ else {
     console.log("Senior");
 }
 
-let checkNum = -5;
+let checkNum = -8;
 console.log(checkNum > 0 ? "Positive" : checkNum < 0 ? "Negative" : "Zero");
 
 let trafficLight = "red";
@@ -70,7 +70,7 @@ greet("Mahnoor");
 function sum(a, b) {
     return a + b;
 }
-console.log(sum(3, 7));
+console.log(sum(9, 7));
 
 function findMax(numbers) {
     let max = numbers[0]; 
@@ -93,12 +93,12 @@ console.log(square(4));
 const findLongString = arr => arr.find(str => str.length > 5);
 console.log(findLongString(["apple", "banana", "kiwi", "strawberry"]));
 
-let numbers = [1, 2, 3, 4, 5];
-let sum = 0;
+let numbers = [4,5,6,7,8];
+let totalsum=0;
 for(let i = 0; i < numbers.length; i++) {
-    sum += num;
+    totalsum += numbers[i];
 }
-console.log("Sum:", sum); 
+console.log("Sum:", totalsum); 
 
 
 let names = ["Ali", "urooj", "Mahnoor", "Muhammad", "Fatima"];
