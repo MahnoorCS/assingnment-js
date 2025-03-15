@@ -2,9 +2,9 @@ let age = 21;
 let birthYear = 2025 - age;
 console.log("Age:", age, "Birth Year:", birthYear);
 function testScope() {
-    let x = 10;  // x is local to this function
+    let x = 10; 
 }
-testScope();  // Removed console.log(typeof x)
+testScope();  
 
 let num1 = 10;
 let num2 = 5;
@@ -21,12 +21,12 @@ console.log("Back to String:", String(convertedNum));
 let number = 9;
 console.log(number % 2 === 0 ? "Even" : "Odd");
 
-let personAge = 45;
+let personAge= 45;
 if (personAge < 13)
 {
     console.log("Child");
 } 
-else if (personAge < 20) {
+else if (personAge > 13 && personAge < 20) {
     console.log("Teenager");
 }
 else if (personAge < 60) {
@@ -41,10 +41,17 @@ console.log(checkNum > 0 ? "Positive" : checkNum < 0 ? "Negative" : "Zero");
 
 let trafficLight = "red";
 switch (trafficLight) {
-    case "red": console.log("Stop"); break;
-    case "yellow": console.log("Ready"); break;
-    case "green": console.log("Go"); break;
-    default: console.log("Invalid color");
+    case "red":
+        console.log("Stop"); 
+        break;
+    case "yellow":
+        console.log("Ready");
+        break;
+    case "green":
+        console.log("Go");    
+        break;
+    default:
+    console.log("Invalid color");
 }
 
 for (let i = 1; i <= 10; i++) {
@@ -66,11 +73,12 @@ function greet(name) {
     console.log("Hello",name);
 }
 greet("Mahnoor");
+greet("Namrah")
 
-function sum(a, b) {
+function addition(a, b) {
     return a + b;
 }
-console.log(sum(9, 7));
+console.log(addition(9, 7));
 
 function findMax(numbers) {
     let max = numbers[0]; 
@@ -84,27 +92,27 @@ function findMax(numbers) {
 console.log(findMax([3, 7, 2, 8, 5]));
 
 
-const greetArrow = name => console.log("Hello",name);
+const greetArrow = name => console.log("What's up?",name);
 greetArrow("Mahnoor");
 
 const square = num => num * num;
 console.log(square(4));
 
 const findLongString = arr => arr.find(str => str.length > 5);
-console.log(findLongString(["apple", "banana", "kiwi", "strawberry"]));
+console.log(findLongString(["eagle", "cat", "dog", "elephant"]));
 
-let numbers = [4,5,6,7,8];
-let totalsum=0;
+let numbers = [4,85,6,27,8];
+let sum=0;
 for(let i = 0; i < numbers.length; i++) {
-    totalsum += numbers[i];
+    sum += numbers[i];
 }
-console.log("Sum:", totalsum); 
+console.log("Sum:", sum); 
 
 
 let names = ["Ali", "urooj", "Mahnoor", "Muhammad", "Fatima"];
 let longestName = names.reduce((a, b) => (a.length > b.length ? a : b));
 console.log("Longest name:", longestName);
 
-let numArray = [1, 2, 3, 2, 4, 1, 5];
+let numArray = [12, 92, 73, 12, 44, 12, 5 ,92];
 let uniqueNums = [...new Set(numArray)];
 console.log("Unique numbers:", uniqueNums);
